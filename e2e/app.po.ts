@@ -11,6 +11,6 @@ export class Page {
   }
 
  getPageOneTitleText() {
-    return element(by.tagName('page-one')).element(by.tagName('ion-title')).getText();
+    return element(by.tagName('ion-title')).getText();
   }
 }
