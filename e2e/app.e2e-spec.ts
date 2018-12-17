@@ -22,20 +22,6 @@ describe('App', () => {
       expect(page.getFieldName()).toContain('Weight (kg)');
     });
 
-    // it('should have an input field for Height', () => {
-    //   expect(page.getFieldName()).toContain('Height (cm)');
-    // });
-
-    // it('should calculate BMI and display results', () => {
-    //   page.fillInForm(1000, 'Female', 20);
-    //   expect(page.results_card_header()).toContain('Cooper Test Result');
-    //   expect(page.results_card_content()).toContain('Gender: female, Age: 20  Result: Poor');
-    // });
 
   })
-
-  // describe('about page', () => {
-    
-  // })
-
 });
