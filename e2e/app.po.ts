@@ -18,13 +18,29 @@ export class Page {
     return element(by.tagName('ion-label')).getText();
   } 
 
+  fillInForm(weight, height) {
 
-  // fillInForm(weight, height) {
-  //     element(by.css('.select')).click().then(() => {  // find the dropdown and click on it
+    let weight_input = element.all(by.css('.text-input')).first();
+    let height_input = element.all(by.css('.text-input')).last();
 
-  //     element(by.cssContainingText('.button-inner', gender)).click(); // click the gender option you want
-  //     element(by.cssContainingText('.button-inner', 'OK')).click();  // click the OK button
+    weight_input.clear().then(() => {
+      weight_input.sendKeys(weight);
+    });
 
-  //   })
+    height_input.clear().then(() => {
+      height_input.sendKeys(height);
+    })
+    
+    element(by.cssContainingText('.button-inner', 'Calculate')).click();
+  
+  }
+
+  results_card_header() {
+      return element(by.css('ion-card-header')).getText();
+  } 
+
+  results_card_content() {
+      return element(by.css('ion-card-content')).getAttribute('textContent');
+  } 
 
 }

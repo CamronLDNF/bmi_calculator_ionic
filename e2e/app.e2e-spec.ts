@@ -18,10 +18,11 @@ describe('App', () => {
       });
     });
 
-    it('should have an input field for Weight', () => {
-      expect(page.getFieldName()).toContain('Weight (kg)');
+    it('should allow user to fill in form and receive results', () => {
+      page.fillInForm(70, 150);
+      expect(page.results_card_header()).toContain('BMI Calculation');
+      expect(page.results_card_content()).toContain('BMI: 31.11');
+      expect(page.results_card_content()).toContain('You are Obese');
     });
-
-
   })
 });
